@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Sharing App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Add Font Awesome for file icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Sharing App</h1>
+      <form id="uploadForm">
+        <div class="drop-area" id="dropArea">
+          <p>Drag & Drop files here or click to select files</p>
+          <input type="file" id="fileInput" multiple hidden />
+        </div>
+        <button type="button" onclick="uploadFiles()">Upload</button>
+        <button type="button" onclick="clearCache()">Clear Cache</button>
+      </form>
+      <h2>Shared Files</h2>
+      <ul id="fileList" class="file-list"></ul>
+      <div>
+        <h3>Your Local IP Address:</h3>
+        <p id="localIP"></p>
+      </div>
+      <div>
+        <h3>Scan QR Code to Access the App:</h3>
+        <img id="qrCode" alt="QR Code" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
